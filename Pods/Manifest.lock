@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.8.2)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8)
+  - MagicalRecord
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MagicalRecord
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+
+PODFILE CHECKSUM: b8f924c825d11935890db0be5519ffdb52464da2
+
+COCOAPODS: 1.8.4
