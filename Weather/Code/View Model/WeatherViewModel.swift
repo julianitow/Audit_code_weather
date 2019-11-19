@@ -30,6 +30,20 @@ class WeatherViewModel{
      */
     func fetchWeather(currentLocation: CLLocation?, completion: @escaping ServiceResponse) {
         
+        let preferences = UserDefaults.standard
+        
+        let currentLevelKey = "VU8EE1IsBCZUeVFmBHIGLwVtVWAOeAYhAn4HZAtuVShROgBhUjJcOgdpUy5QfwcxBSgPbFxnADBTOFYuXy1TMlU%2FBGhSOQRjVDtRNAQrBi0FK1U0Di4GIQJnB2ILeFU0UTEAelI5XDoHdlMwUGEHNwUpD3BcYgA9UzZWNV82UzhVNwRkUjEEYVQkUSwEMQZmBTJVNQ4wBjkCZgc2C2ZVMFFnADVSOFw7B3ZTOFBhBzQFMg9vXGYAO1MwVi5fLVNJVUUEfVJxBCRUblF1BCkGZwVoVWE%3D&_c=88bf0afd6ef9730869e30eced820d420"
+        
+        let currentLevel = 1
+            preferences.set(currentLevel, forKey: currentLevelKey)
+        
+        //  Save to disk
+        let didSave = preferences.synchronize()
+        
+        if !didSave {
+            //  Couldn't save (I've never seen this happen in real world testing)
+        }
+        
         //TOKEN D'AUTHENTIFICATION A SEPARER DE l'URL POUR PLUS DE VISIBILITE
         let urlString = "https://www.infoclimat.fr/public-api/gfs/json?_ll=\(48.85341),\(2.3488)&_auth=VU8EE1IsBCZUeVFmBHIGLwVtVWAOeAYhAn4HZAtuVShROgBhUjJcOgdpUy5QfwcxBSgPbFxnADBTOFYuXy1TMlU%2FBGhSOQRjVDtRNAQrBi0FK1U0Di4GIQJnB2ILeFU0UTEAelI5XDoHdlMwUGEHNwUpD3BcYgA9UzZWNV82UzhVNwRkUjEEYVQkUSwEMQZmBTJVNQ4wBjkCZgc2C2ZVMFFnADVSOFw7B3ZTOFBhBzQFMg9vXGYAO1MwVi5fLVNJVUUEfVJxBCRUblF1BCkGZwVoVWE%3D&_c=88bf0afd6ef9730869e30eced820d420"
         guard let url = URL(string: urlString) else { return }
