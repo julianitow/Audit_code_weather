@@ -19,6 +19,10 @@ class WeatherViewModel{
         let dbWeathers = (DBWeather.mr_findAll() as? [WeatherProtocol]) ?? []
         return  dbWeathers.sorted(by: { $0.formattedDate.compare($1.formattedDate) == .orderedAscending })
     }
+    
+    //TEST BACKGROUND THREAD
+    func fetch_data(url: URL, completion: @escaping ServiceResponse) -> Void {
+    }
 
     /*
      Execute the request on the webservice with the data provided in the parameters.
@@ -87,6 +91,7 @@ class WeatherViewModel{
             case .failure(let error):
                 completion(error)
             }
-        }
+        }//reponseJSON
+    
     }
 }
