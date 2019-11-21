@@ -23,7 +23,9 @@ class HomeCell: UICollectionViewCell {
     //MARK: Configure Cell
     func configurewith(_ weather: WeatherProtocol, at index: Int) {
         self.backgroundColor = WeatherUtils.weatherColor(index: index)
-        self.dateLabel.text = WeatherUtils.changeDateFormat(dateString: weather.date) 
-        self.temperatureLabel.text = String(format: "%.0f", weather.temperature! - 273.15) + "°C"
+        self.dateLabel.text = WeatherUtils.changeDateFormat(dateString: weather.date)
+        if(weather.temperature != nil){
+                self.temperatureLabel.text = String(format: "%.0f", weather.temperature! - 273.15) + "°C"
+        }
     }
 }

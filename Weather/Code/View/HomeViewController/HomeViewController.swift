@@ -98,6 +98,7 @@ class HomeViewController: UIViewController {
             locationManager.startUpdatingLocation()
         } else {
             self.getWeather()
+            return;
         }
     }
 }
