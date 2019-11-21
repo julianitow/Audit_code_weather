@@ -46,7 +46,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="b9G-if-PTd" id="jA9-pf-CWO"/>
-                        <outlet property="refresh_button" destination="hPo-EU-Dw9" id="PkC-s6-86e"/>
+                        <outlet property="refreshButton" destination="hPo-EU-Dw9" id="PkC-s6-86e"/>
                         <segue destination="ues-Yi-gR2" kind="show" identifier="HomeToDetails" id="l5d-9q-9LX"/>
                     </connections>
                 </viewController>

@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
 
     //MARK: Outlets
     @IBOutlet weak private var collectionView: UICollectionView!
-    @IBOutlet weak var refresh_button: UIBarButtonItem!
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
     
     //MARK: Properties
     var estimateWidth = CGFloat(300.0)
@@ -97,10 +97,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func refreshWeather(_ sender: Any) {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: true){ _ in
-            self.refresh_button.isEnabled = true
+            self.refreshButton.isEnabled = true
         }
         if CLLocationManager.locationServicesEnabled() {
-            self.refresh_button.isEnabled = false
+            self.refreshButton.isEnabled = false
         } else {
             
             self.getWeather()
