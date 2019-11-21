@@ -94,15 +94,20 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func refreshWeather(_ sender: Any) {
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: true){ _ in
+    func delay(interval: TimeInterval) -> Void{
+        Timer.scheduledTimer(withTimeInterval: interval, repeats: true){ _ in
             self.refreshButton.isEnabled = true
         }
+        return
+    }
+    
+    @IBAction func refreshWeather(_ sender: Any) {
+        self.refreshButton.isEnabled = false
         if CLLocationManager.locationServicesEnabled() {
-            self.refreshButton.isEnabled = false
+            delay(interval: 3)
+            getWeather()
         } else {
-            
+            delay(interval: 3)
             self.getWeather()
             return;
         }
