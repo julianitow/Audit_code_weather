@@ -94,21 +94,15 @@ class HomeViewController: UIViewController {
         }
     }
     
-    func enableRefresh() -> Void {
-        self.refresh_button.isEnabled = true
-    }
     
     @IBAction func refreshWeather(_ sender: Any) {
-        print("BAR BUTTON " + self.refresh_button.debugDescription)
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true){ _ in
+            self.refresh_button.isEnabled = true
+        }
         if CLLocationManager.locationServicesEnabled() {
-            print("HERE IF")
             self.refresh_button.isEnabled = false
-            Timer.scheduledTimer(withTimeInterval: 2, repeats: true){ _ in
-                self.refresh_button.isEnabled = true
-            }
         } else {
-            print("HERE ELSE")
-            //Timer.scheduledTimer(timeInterval: 90, target: self, selector: "enableRefresh", userInfo: nil, repeats: false)
+            
             self.getWeather()
             return;
         }
