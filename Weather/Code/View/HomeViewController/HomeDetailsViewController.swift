@@ -57,10 +57,10 @@ class HomeDetailsViewController: UIViewController {
         } else {
             self.temperatureLabel.text = "0°C"
         }
-        self.humidityValueLabel.text = "\(weather.humidity ?? 0)"
-        self.pressureValueLabel.text = "\(weather.pressure ?? 0)"
-        self.rainValueLabel.text = "\(weather.rain ?? 0)"
-        self.windValueLabel.text = "\(weather.wind ?? 0)"
+        self.humidityValueLabel.text = "\(weather.humidity ?? 0) %"
+        self.pressureValueLabel.text = "\(weather.pressure ?? 0)Pa"
+        self.rainValueLabel.text = "\(weather.rain ?? 0) mm/3h"
+        self.windValueLabel.text = "\(weather.wind ?? 0)km/h"
     }
     
     //MARK: Setup Views and Constraints
