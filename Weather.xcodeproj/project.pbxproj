@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		273A335A8A528FE4394A8914 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7F96EEB151FE04A8ABAB799 /* Pods_Weather.framework */; };
+		4D45735323D1F32A00873645 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D45735223D1F32A00873645 /* GoogleService-Info.plist */; };
 		6D977CA322F034C3009A93A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D977CA222F034C3009A93A3 /* AppDelegate.swift */; };
 		6D977CA522F034C3009A93A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D977CA422F034C3009A93A3 /* HomeViewController.swift */; };
 		6D977CA822F034C3009A93A3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D977CA622F034C3009A93A3 /* Home.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D45735223D1F32A00873645 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D53850C2368804A00835174 /* Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weather.entitlements; sourceTree = "<group>"; };
 		6D977C9F22F034C3009A93A3 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D977CA222F034C3009A93A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		6D977CD022F03508009A93A3 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				4D45735223D1F32A00873645 /* GoogleService-Info.plist */,
 				6D977CA922F034C4009A93A3 /* Assets.xcassets */,
 				6D977CD522F036E7009A93A3 /* Default-568h@2x.png */,
 				6D977CAB22F034C4009A93A3 /* LaunchScreen.storyboard */,
@@ -397,6 +400,7 @@
 				6D977CD622F036E7009A93A3 /* Default-568h@2x.png in Resources */,
 				6D977CAA22F034C4009A93A3 /* Assets.xcassets in Resources */,
 				6D977CA822F034C3009A93A3 /* Home.storyboard in Resources */,
+				4D45735323D1F32A00873645 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>631844210352-cap84ih7t5t2ofm5oes497i306k1fobp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.631844210352-cap84ih7t5t2ofm5oes497i306k1fobp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAOqvBpmkNxqY4-99oDqb2Dym8nqeTA0i8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>631844210352</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.weather.audit.esgi.fr</string>
+	<key>PROJECT_ID</key>
+	<string>weather-esgi</string>
+	<key>STORAGE_BUCKET</key>
+	<string>weather-esgi.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:631844210352:ios:71455e35967a3235315d75</string>
+	<key>DATABASE_URL</key>
+	<string>https://weather-esgi.firebaseio.com</string>
+</dict>
+</plist>
