@@ -95,8 +95,12 @@ class HomeViewController: UIViewController {
     }
     
     func delay(interval: TimeInterval) -> Void{
-        Timer.scheduledTimer(withTimeInterval: interval, repeats: true){ _ in
-            self.refreshButton.isEnabled = true
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: interval, repeats: true){ _ in
+                self.refreshButton.isEnabled = true
+            }
+        } else {
+            // Fallback on earlier versions
         }
         return
     }
@@ -104,10 +108,10 @@ class HomeViewController: UIViewController {
     @IBAction func refreshWeather(_ sender: Any) {
         self.refreshButton.isEnabled = false
         if CLLocationManager.locationServicesEnabled() {
-            delay(interval: 3)
+            delay(interval: 1)
             getWeather()
         } else {
-            delay(interval: 3)
+            delay(interval: 1)
             self.getWeather()
             return;
         }
