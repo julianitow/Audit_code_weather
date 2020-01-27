@@ -35,7 +35,7 @@ class WeatherViewModel{
     func fetchWeather(currentLocation: CLLocation?, completion: @escaping ServiceResponse) {
         
         //TOKEN D'AUTHENTIFICATION A SEPARER DE l'URL POUR PLUS DE VISIBILITE
-        let urlString = "https://www.infoclimat.fr/public-api/gfs/json?_ll=\(48.85341),\(2.3488)&_auth=VU8EE1IsBCZUeVFmBHIGLwVtVWAOeAYhAn4HZAtuVShROgBhUjJcOgdpUy5QfwcxBSgPbFxnADBTOFYuXy1TMlU%2FBGhSOQRjVDtRNAQrBi0FK1U0Di4GIQJnB2ILeFU0UTEAelI5XDoHdlMwUGEHNwUpD3BcYgA9UzZWNV82UzhVNwRkUjEEYVQkUSwEMQZmBTJVNQ4wBjkCZgc2C2ZVMFFnADVSOFw7B3ZTOFBhBzQFMg9vXGYAO1MwVi5fLVNJVUUEfVJxBCRUblF1BCkGZwVoVWE%3D&_c=88bf0afd6ef9730869e30eced820d420"
+        let urlString = "https://www.infoclimat.fr/public-api/gfs/json?_ll=\(currentLocation!.coordinate.longitude),\(currentLocation!.coordinate.latitude)&_auth=VU8EE1IsBCZUeVFmBHIGLwVtVWAOeAYhAn4HZAtuVShROgBhUjJcOgdpUy5QfwcxBSgPbFxnADBTOFYuXy1TMlU%2FBGhSOQRjVDtRNAQrBi0FK1U0Di4GIQJnB2ILeFU0UTEAelI5XDoHdlMwUGEHNwUpD3BcYgA9UzZWNV82UzhVNwRkUjEEYVQkUSwEMQZmBTJVNQ4wBjkCZgc2C2ZVMFFnADVSOFw7B3ZTOFBhBzQFMg9vXGYAO1MwVi5fLVNJVUUEfVJxBCRUblF1BCkGZwVoVWE%3D&_c=88bf0afd6ef9730869e30eced820d420"
         guard let url = URL(string: urlString) else { return }
         
         Alamofire.request(url).validate().responseJSON { response in
